@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+{% block title %}{{parent()}} - Edit{% endblock %}
+{% block titre%}{{parent()|upper}} - consultation de {{entreprise.getTitre()}} {% endblock %}
+{% block body %}
+
+<h1>Specialite :{{ entreprise.getSpecialite()}}</h1>
+<h2>Date de creation :{{ entreprise.getCreatedAt()| date('d-m-Y')}}</h2> 
+<h2>email :{{ entreprise.getEmail()}}</h2> 
+
+{% endblock %}
